@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .8fr .8fr 1fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    grid-template-areas: 
+        "main    main     header"
+        "main    main     candy"
+        "nom     yum      candy"
+        "footer  footer   candy";
+}
+
+main {
+    grid-area: main;
+    background-color: #FFFADF;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+}
+
+.candy {
+    grid-area: candy;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/candy.jpg');
+    background-size: cover;
+}
+
+.nom {
+    grid-area: nom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4B35A;
+    color: white;
+    padding: 1em;
+}
+
+hr {
+    flex: auto;
+    border: none;
+    height: 2px;
+    background-color: white;
+   
+}
+
+.yum {
+    grid-area: yum;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    color: white;
+    padding: 1em;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    place-items: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: #202020;
+    color: gray;
+}
